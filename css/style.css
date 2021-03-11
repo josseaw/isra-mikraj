@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Tangerine', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+section {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#ffeb3b, #e91e63);
+}
+
+section h1 {
+    position: relative;
+    font-size: 110px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 5px 102px rgba(0, 0, 0, 0.2);
+}
+
+section h1:before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -60px;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border-left: 15px solid #fff;
+    border-radius: 50%;
+    transform: rotate(-26deg);
+    box-shadow: -10px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+section p {
+    position: relative;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: right;
+    color: #fff;
+}
+
+.mosque {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 354px;
+    background: url(../img/mosque.png);
+    background-repeat: repeat-x;
+    background-size: 1050px;
+    z-index: 1;
+    pointer-events: none;
+    animation: animate 12s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 1050px;
+    }
+}
+
+.mosque:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    background: url(../img/mosque.png);
+    background-repeat: repeat-x;
+    background-size: 1600px;
+    z-index: 1;
+    opacity: .1;
+    pointer-events: none;
+    animation: animateReverse 16s linear infinite;
+}
+
+@keyframes animateReverse {
+    0% {
+        background-position: 1600px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width:1324px) {
+    section {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    section h1:before {
+        top: -50px;
+        left: -20px;
+    }
+}
+
+@media only screen and (max-width:1122px) {
+    section h1:before {
+        top: -50px;
+        left: -40px;
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media only screen and (max-width:970px) {
+    section h1:before {
+        top: -50px;
+        left: -40px;
+        width: 280px;
+        height: 280px;
+    }
+    section p {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width:840px) {
+    section h1:before {
+        top: -30px;
+        left: -60px;
+        width: 380px;
+        height: 380px;
+        transform: rotate(-18deg);
+    }
+}
